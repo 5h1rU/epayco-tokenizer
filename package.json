@@ -1,0 +1,63 @@
+{
+  "name": "epayco-tokenizer",
+  "version": "1.0.0",
+  "description": "Agnostic browser tokenizer for epayco",
+  "repository": "https://github.com/5h1rU/epayco-tokenizer",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "testMatch": [
+      "**/tests/*.+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfigTest.json"
+      }
+    }
+  },
+  "keywords": [
+    "epayco",
+    "token",
+    "credit card"
+  ],
+  "author": "Felipe Janer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/crypto-js": "^3.1.43",
+    "@types/jest": "^23.3.1",
+    "@types/uuid": "^3.4.3",
+    "jest": "^23.5.0",
+    "rollup": "^0.64.1",
+    "rollup-plugin-typescript2": "^0.16.1",
+    "ts-jest": "^23.1.3",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "uuid": "^3.3.2",
+    "whatwg-fetch": "^2.0.4"
+  }
+}

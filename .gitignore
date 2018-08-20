@@ -1,0 +1,4 @@
+node_modules
+coverage
+.rpt2_cache
+.DS_Store
