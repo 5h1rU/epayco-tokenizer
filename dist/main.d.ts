@@ -2,7 +2,6 @@ import 'whatwg-fetch';
 interface Payload {
     type: string;
     value: string;
-    required: boolean;
 }
 declare class Tokenizer {
     API_KEY: string;

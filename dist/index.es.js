@@ -118,10 +118,14 @@ var Tokenizer = /** @class */ (function () {
                         return [4 /*yield*/, response.json()];
                     case 2:
                         res = _a.sent();
+                        if (!res.status) {
+                            throw new Error(res.message);
+                        }
                         token = res.data.token;
                         return [2 /*return*/, token];
                     case 3:
                         error_1 = _a.sent();
+                        console.log('entra al catch?', error_1);
                         throw error_1;
                     case 4: return [2 /*return*/];
                 }
