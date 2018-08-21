@@ -5,7 +5,6 @@ import 'whatwg-fetch';
 interface Payload {
   type: string;
   value: string;
-  required: boolean;
 }
 
 class Tokenizer {
@@ -55,9 +54,15 @@ class Tokenizer {
         })
       });
       const res = await response.json();
+
+      if (!res.status) {
+        throw new Error(res.message);
+      }
+    
       const token = res.data.token;
       return token;
     } catch (error) {
+      console.log('entra al catch?', error);
       throw error;
     }
   }
