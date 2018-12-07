@@ -1,6 +1,6 @@
 {
   "name": "epayco-tokenizer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Agnostic browser tokenizer for epayco",
   "repository": "https://github.com/5h1rU/epayco-tokenizer",
   "main": "dist/index.js",
